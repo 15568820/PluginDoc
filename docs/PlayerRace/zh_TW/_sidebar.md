@@ -1,0 +1,13 @@
+# PlayerRace
+* [首頁](PlayerRace/zh_TW/README)
+* [**命令和權限**](PlayerRace/zh_TW/command)
+* [**PlaceholderAPI變量大全**](PlayerRace/zh_TW/papi)
+* [**吸血鬼**](PlayerRace/zh_TW/vampire)
+* [**狼人**](PlayerRace/zh_TW/werwolf)
+* [**食屍鬼**](PlayerRace/zh_TW/ghoul)
+* [**惡魔**](PlayerRace/zh_TW/demon)
+* [**天使**](PlayerRace/zh_TW/angel)
+* [**惡魔獵手**](PlayerRace/zh_TW/demonHunter)
+* [**重拾人性**](PlayerRace/zh_TW/problem)
+* [**更新記錄**](PlayerRace/zh_TW/log)
+* [**API**](PlayerRace/zh_TW/api)

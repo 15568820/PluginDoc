@@ -1,0 +1,13 @@
+# PlayerGuild
+* [首页](PlayerGuild/zh_CN/README)
+* [**命令和权限**](PlayerGuild/zh_CN/command)
+* [**PlaceholderAPI变量大全**](PlayerGuild/zh_CN/papi)
+* [**常见问题**](PlayerGuild/zh_CN/problem)
+* [**图片展示**](PlayerGuild/zh_CN/img)
+* [**视频介绍**](PlayerGuild/zh_CN/mp4)
+* [**公会战介绍**](PlayerGuild/zh_CN/pvp)
+* [**公会战地图**](PlayerGuild/zh_CN/map)
+* [**萌芽版本**](PlayerGuild/zh_CN/GermEngine)
+* [**api**](PlayerGuild/zh_CN/api)
+* [**更新记录**](PlayerGuild/zh_CN/log)
+* [**我的作品**](PlayerGuild/zh_CN/other)

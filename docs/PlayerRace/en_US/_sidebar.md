@@ -1,0 +1,13 @@
+# PlayerRace
+* [Home](PlayerRace/en_US/README)
+* [**Commands and permissions**](PlayerRace/en_US/command)
+* [**PlaceholderAPIVariablesComplete**](PlayerRace/en_US/papi)
+* [**Vampire**](PlayerRace/en_US/vampire)
+* [**Werewolf**](PlayerRace/en_US/werwolf)
+* [**Ghouls**](PlayerRace/en_US/ghoul)
+* [**Demon**](PlayerRace/en_US/demon)
+* [**Angel**](PlayerRace/en_US/angel)
+* [**DemonHunter**](PlayerRace/en_US/demonHunter)
+* [**Reclaiming Humanity**](PlayerRace/en_US/problem)
+* [**Update log**](PlayerRace/en_US/log)
+* [**API**](PlayerRace/en_US/api)

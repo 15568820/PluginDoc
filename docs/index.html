@@ -1,0 +1,84 @@
+<!-- index.html -->
+
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <title>米饭 文档</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta charset="UTF-8">
+    <meta name="description" content="rice-doc: 米饭插件文档，我的世界(Minecraft)playerTitle称号插件" />
+    <meta name="keywords" content="rice-doc,Minecraft,我的世界,米饭文档,playerTitle,playerTask,称号插件,任务插件,插件" />
+    <meta name="baidu-site-verification" content="code-pqWI12oIXz" />
+    <meta name="author" content="handy，956812056@qq.com" />
+    <link rel="stylesheet" href="https://cdn.staticfile.org/docsify/4.12.2/themes/vue.min.css">
+    <link rel="icon" href="https://img.ljxmc.top/favicon.ico">
+    <!-- 百度统计 -->
+    <script>
+        var _hmt = _hmt || [];
+        (function () {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?30c461f647ce41d7cf2e785a1bd63f96";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+</head>
+<body>
+<div id="app">加载时间过久请刷新页面...</div>
+
+<script>
+    window.$docsify = {
+        loadSidebar: true,
+        loadNavbar: true,
+        name: '米饭 文档',
+        repo: 'https://ricedoc.handyplus.cn',
+        coverpage: true,
+        //自动跳转到页面顶部
+        auto2top: true,
+        //小屏设备下合并导航栏到侧边栏
+        mergeNavbar: true,
+        count:{
+            countable:true,
+            fontsize:'0.9em',
+            color:'rgb(90,90,90)',
+            language:'chinese'
+        },
+        plugins: [
+            // footer
+            function (hook) {
+                var ad = [
+                    '<div style="padding: 0em 1em 1em 1em; background-color: #E8ECF1;">' +
+                    '特别宣传 by：<a target="_blank" href="https://www.mcbbs.net/thread-1297813-1-1.html">' +
+                    ' <img src="https://s4.ax1x.com/2022/02/23/bC65xf.png" style="width:100%"></a></div>',
+                    '<br/>'
+                ].join('');
+
+                var footer = [
+                    '<hr/>',
+                    '<footer>',
+                    '<span><a href="https://beian.miit.gov.cn" target="_blank" style="color: inherit; font-weight: normal; text-decoration: none;">晋ICP备19010136号</a><br/>&copy; 2022 rice doc. All Rights Reserved.</span>',
+                    '<span><a href="https://docsify.js.org" target="_blank">Powered by docsify</a></span>',
+                    '</footer>'
+                ].join('');
+
+                hook.afterEach(function (html) {
+                    return ad + html + footer;
+                });
+            }
+        ]
+    }
+</script>
+<!-- gitter -->
+<script>
+    ((window.gitter = {}).chat = {}).options = {
+        room: 'rice-doc/community'
+    };
+</script>
+<script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
+<!-- emoji -->
+<script src="https://cdn.staticfile.org/docsify/4.12.2/plugins/emoji.min.js"></script>
+
+<script src="https://cdn.staticfile.org/docsify/4.12.2/docsify.min.js"></script>
+</body>
+</html>
