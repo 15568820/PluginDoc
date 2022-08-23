@@ -8,7 +8,7 @@
 **玩家任务** **PlayerTask** **付费插件** **(有免费版)**    
 [MCBBS](https://www.mcbbs.net/thread-1084534-1-1.html) &ensp;
 [SpigotMc](https://www.spigotmc.org/resources/96554) &ensp;
-[wiki](PlayerTask/zh_CN/)
+[wiki](KLRingExchange/zh_CN/)
 
 **玩家公会** **PlayerGuild** **付费插件**   
 [MCBBS](https://www.mcbbs.net/thread-1297813-1-1.html) &ensp;

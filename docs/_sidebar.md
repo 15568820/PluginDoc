@@ -1,3 +1,3 @@
-# 米饭插件列表
+# 付费插件列表
 
-* [**PlayerTask**](PlayerTask/)
+* [**PlayerTask**](KLRingExchange/README.md)
