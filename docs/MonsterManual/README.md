@@ -1,4 +1,4 @@
-## KLRingExchange
+# MonsterManual
 
 ### **适用版本**
 
@@ -6,133 +6,168 @@
 
 ### **依赖插件**
 
-> - KLRing
+> - 必要: MythicMobs
+> - 可选: SX-Attribute 2.0.X
 
 ### **插件介绍**
 
-本插件为KLRing(灵魂空间)附属  
-消耗灵魂空间内的物品兑换到背包  
-此版本为重制版，功能更加强大，同时兼容老的数据
+> - 支持Yaml,MySQL存储
+> - 支持配置每个图鉴副本,副本内可以配置怪物组
+> - GUI大部分支持自定义配置
+> - 图鉴首页支持翻页
+> - 图鉴首页可显示当前图鉴副本内的所有组的解锁状态
+> - 每个怪物组内所有击杀怪物达到所需数量即可解锁该怪物组
+> - 怪物组未解锁时可显示解锁进度
+> - 怪物组解锁后可领取奖励,生效当前怪物组的属性
+> - 当图鉴副本内的所有怪物组解锁完成后可以生效图鉴副本的属性
+> - 可使用指令让玩家解锁指定图鉴副本内的指定怪物组
 
-#### 配置文件高度自定义
+### **示例图片**
 
-> - 兑换状态的模板
-> - 显示已有物品数量的模板
-> - 显示可兑换数量的模板
-> - 中间装饰板模板
-> - 每个兑换GUI的标题
-> - 兑换音效
-> - 玩家和管理员指令的Help
-> - 插件的所有提示
-
-#### 兑换成功和失败均支持音效
-
-![](img/音效自定义.png)
-
-#### 支持显示当前兑换状态
-
-![](img/物品满足.png)
-
-![](img/物品不足.png)
-
-![](img/无兑换物.png)
-
-#### 支持显示所需物品在灵魂空间的当前数量
-
-![](img/兑换演示1.png)
-
-#### 可显示可兑换数量以及不同点击方式兑换数量
-
-![](img/兑换演示2.png)
-
-#### 高效的兑换编辑界面，物品放到对应位置即可，关闭GUI自动保存
-
-![](img/兑换演示3.png)
+###### 图鉴首页示例
+![](img/图鉴首页1.png)
+![](img/图鉴首页2.png)
+###### 怪物组-未解锁
+![](img/怪物组1.png)
+###### 怪物组-已解锁
+![](img/怪物组2.png)
 
 ### **配置文件**
 
+#### **副本示例(一个配置文件一个副本)**
 ```yaml
-Message:
-  prefix: "§8[§e灵魂空间兑换§8] "
-  reload: "§a配置文件重载成功"
-  permission_false: "§a您的权限不够"
-  exchange_length: "§a请输入兑换名"
-  exchange_null: "§a兑换界面 §e{0} §a不存在"
-  exchange_create: "§a兑换界面 §e{0} §a不存在,已自动创建"
-  editor_true: "§a兑换界面 §e{0} §a编辑成功"
-  amount_false: "§a物品数量不足以兑换"
-  exchange_true: "§a兑换成功"
-  residue_false: "§a请给背包预留足够空间"
-  PlayerHelp:
-    - "§f "
-    - "§f   §8 §8[§e灵魂空间兑换§8]    "
-    - "§a/klre open 兑换名 §f打开兑换界面"
-    - "§f "
-  AdminHelp:
-    - "§f "
-    - "§f   §8 §8[§e灵魂空间兑换§8]    "
-    - "§a/klre open 兑换名 §f打开兑换界面"
-    - "§a/klre edit 兑换名 §f编辑兑换界面"
-    - "§a/klre reload §f重载配置文件"
-    - "§f "
+Title: "§a一层副本图鉴"
+Button:
+  Name: "§a一层副本图鉴"
+  Id: 340
+  Data: 0
+  Lore:
+    - "§c全部激活后生效属性"
+    - "§a攻击力: 1000"
+    - "§a生命上限: 1000"
+    - "&c&m                     "
+# 全部激活后的奖励
+Reward:
+  - "mm i give %player% 测试符文"
+  - "mm i give %player% 测试符文"
+# 全部激活后的属性
+Attribute:
+  - "§a攻击力: 1000"
+  - "§a生命上限: 1000"
+Mobs:
+  # mm 怪物代号
+  恶魔士兵:
+    Name: "§a恶魔士兵"
+    Id: 331
+    Data: 0
+    Lore:
+      - "§c全部激活后生效属性"
+      - "§a攻击力: 1000"
+      - "§a生命上限: 1000"
+      - "&c&m                     "
+      - "%state% "
+    # 图鉴怪物列表(可多只)
+    List:
+      - "恶魔士兵2"
+    # 列表内怪物击杀数量
+    Amount: 10
+    # 奖励
+    Reward:
+      - "mm i give %player% 测试符文"
+      - "mm i give %player% 测试符文"
+    # 生效属性
+    Attribute:
+      - "§a攻击力: 1000"
+      - "§a生命上限: 1000"
+  恶魔士兵2:
+    Name: "§a恶魔士兵2"
+    Id: 331
+    Data: 0
+    Lore:
+      - "§c全部激活后生效属性"
+      - "§a攻击力: 1000"
+      - "§a生命上限: 1000"
+      - "&c&m                     "
+      - "%state% "
+    # 图鉴怪物列表(可多只)
+    List:
+      - "恶魔士兵2"
+    # 列表内怪物击杀数量
+    Amount: 10
+    # 奖励
+    Reward:
+      - "mm i give %player% 测试符文"
+      - "mm i give %player% 测试符文"
+    # 生效属性
+    Attribute:
+      - "§a攻击力: 1000"
+      - "§a生命上限: 1000"
+
+
+```
+#### **config.yml**
+```yaml
 Config:
   # 您的授权码
   Code: "IKUN-JNTM-SZ666-SUSHAN"
-  # 兑换时背包最少剩余空间
-  InventoryResidue: 4
-  # 以下禁止为0
-  # 左键兑换数量
-  Left: 1
-  # 右键兑换数量
-  Right: 16
-  # 左键+Shift兑换数量
-  LeftShift: 32
-  # 右键+Shift兑换数量
-  RightShift: 64
-  # 音效
-  Sound:
-    # 随机填一个无效的音效则关闭音效提示
-    # 如需更多音效可前往Spigot开发文档查看
-    # https://hub.spigotmc.org/javadocs/spigot/org/bukkit/Sound.html
-    # 兑换成功音效
-    exchange_true: "ENTITY_PLAYER_LEVELUP"
-    # 兑换失败音效
-    exchange_false: "ENTITY_PLAYER_DEATH"
-Gui:
-  # 默认兑换标题
-  DefaultTitle: "§c灵魂空间兑换,可在对应GUI配置文件进行修改"
-  Amount:
-    - "§e已有数量: %amount%"
-  ExchangeInfo:
-    - "§7§m                      "
-    - "§a 单击左键 兑换1个"
-    - "§a 单击右键 兑换16个"
-    - '§a SHIFT+左键 兑换32个'
-    - '§a SHIFT+右键 兑换64个'
-    - "§e可兑换数量: %amount%"
-  Item:
-    # 物品满足时显示
-    exchange_true:
-      Id: 160
-      Data: 5
-      Name: "§a物品满足"
-      Lore: [ ]
-    # 物品不足时显示
-    exchange_false:
-      Id: 160
-      Data: 14
-      Name: "§c物品不足"
-      Lore: [ ]
-    # 无兑换物时显示
-    exchange_null:
-      Id: 160
-      Data: 0
-      Name: "§7无兑换物"
-      Lore: [ ]
-    # 中间装饰板
-    decorate:
+  # 数据库
+  MySQL:
+    # 开关
+    enable: false
+    ip: "192.168.0.188"
+    port: "3306"
+    # 数据库名字
+    database: "mc"
+    user: "mc"
+    password: "mc"
+  # 生效的图鉴列表
+  Manual:
+    - "一层副本"
+  Gui:
+    Title: "§c图鉴 §a第 §e%page% §a页"
+    # %mob% 变量显示怪物名字
+    All_Unlock: "§a全部解锁"
+    Unlock_true: "§6 %mob% §a已解锁"
+    Unlock_false: "§6 %mob% §c未解锁"
+    # 填充物品
+    Decorate:
+      Name: "§f玻璃板"
       Id: 160
       Data: 15
-      Name: ""
-      Lore: [ ]
+      Lore:
+        - " "
+    # 上一页
+    PageUp:
+      Name: "§f上一页"
+      Id: 262
+      Data: 0
+      Lore:
+        - "§a点击打开上一页"
+    # 下一页
+    PageDown:
+      Name: "§f下一页"
+      Id: 262
+      Data: 0
+      Lore:
+        - "§a点击打开下一页"
+Message:
+  prefix: "§8[§e怪物图鉴§8] "
+  state_unlock: "§a已解锁"
+  state_reward: "§c可领取"
+  state_false: "§c未解锁：§e%current%/%total%"
+  msg_state_true: "§c奖励领取成功"
+  msg_state_false: "§c您的击杀数量未达到，不可领取"
+  reload: "§a配置文件重载成功."
+  pagedown_false: "§a这已经是最后一页了."
+  pageup_false: "§a这已经是第一页了."
+  permission_false: "§a您的权限不够."
+  unlock_length: "§a请输入正确参数 §emanual unlock 玩家 副本 怪物"
+  unlock_true: "§a玩家 §e{0} §a副本 §e{1} §a怪物 §e{2} §a解锁成功"
+  Help:
+    - "§f "
+    - "§f   §8 §8[§e怪物图鉴§8]    "
+    - "§a/manual open §f打开图鉴"
+    - "§a/manual unlock 玩家 副本 怪物 §f解锁玩家图鉴"
+    - "§a/manual reload §f重载配置文件"
+    - "§f "
 ```
