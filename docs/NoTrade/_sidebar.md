@@ -1,4 +1,4 @@
-# MonsterCard
+# NoTrade
 
 * [**插件介绍**](NoTrade/README)
 * [**更新记录**](NoTrade/log)
