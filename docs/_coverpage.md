@@ -7,3 +7,5 @@
 ## [[怪物图鉴] MonsterManual](MonsterManual/README)
 
 ## [[怪物卡牌] MonsterCard](MonsterCard/README)
+
+## [[交易限制] NoTrade](NoTrade/README)
