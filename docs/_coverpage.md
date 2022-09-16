@@ -8,4 +8,6 @@
 
 ## [[怪物卡牌] MonsterCard](MonsterCard/README)
 
+## [[属性映射] AttributeMap](AttributeMap/README)
+
 ## [[交易限制] NoTrade](NoTrade/README)
