@@ -7,7 +7,10 @@
 ### **依赖插件**
 
 > - 必要: MythicMobs
+> - 必要: SimpleLib (群内下载)
 > - 可选: SX-Attribute 2.0.X
+> - 可选: AttributePlus 2.0.X 3.0.X
+> - 可选: ItemLoreOrigin
 
 ### **插件介绍**
 

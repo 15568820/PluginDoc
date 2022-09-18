@@ -4,6 +4,8 @@
 
 ## [[灵魂空间兑换] KLRingExchange](KLRingExchange/README)
 
+## [[养成] EquipIntensify](EquipIntensify/README)
+
 ## [[怪物图鉴] MonsterManual](MonsterManual/README)
 
 ## [[怪物卡牌] MonsterCard](MonsterCard/README)
